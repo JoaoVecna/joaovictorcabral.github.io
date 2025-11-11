@@ -1,192 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>João Victor Cabral | Portfólio Profissional</title>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/a2d5b6c50b.js" crossorigin="anonymous"></script>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-      background-color: #f9fbfd;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: #ffffff;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      z-index: 1000;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 8%;
-    }
-
-    nav h1 {
-      color: #0077b6;
-      font-weight: 700;
-      font-size: 1.3em;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #0077b6;
-    }
-
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-      background: linear-gradient(to bottom, #ffffff, #e9f3ff);
-      padding: 0 10px;
-    }
-
-    .hero img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 15px;
-      border: 3px solid #0077b6;
-    }
-
-    .hero h2 {
-      font-size: 1.8em;
-      color: #0077b6;
-      margin-bottom: 8px;
-    }
-
-    .hero p {
-      max-width: 600px;
-      color: #555;
-      margin-bottom: 20px;
-    }
-
-    .hero .btn {
-      background: #0077b6;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: background 0.3s;
-    }
-
-    .hero .btn:hover {
-      background: #005f8a;
-    }
-
-    section {
-      padding: 80px 10% 60px;
-      background: white;
-      margin: 30px auto;
-      border-radius: 12px;
-      max-width: 1100px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-
-    section h3 {
-      color: #0077b6;
-      font-size: 1.4em;
-      margin-bottom: 20px;
-      border-left: 5px solid #0077b6;
-      padding-left: 10px;
-    }
-
-    section p, li {
-      line-height: 1.6;
-      color: #444;
-    }
-
-    .services, .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: #f9fbfd;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    }
-
-    .card i {
-      font-size: 2em;
-      color: #0077b6;
-      margin-bottom: 10px;
-    }
-
-    footer {
-      background: #0077b6;
-      color: white;
-      text-align: center;
-      padding: 25px 10px;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: #fff;
-      margin: 0 8px;
-      text-decoration: none;
-      font-size: 1.2em;
-    }
-
-    footer a:hover {
-      color: #caf0f8;
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .hero h2 {
-        font-size: 1.5em;
-      }
-    }
-  </style>
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
+  <!-- Header / Navegação -->
   <header>
     <nav>
       <h1>João Victor Cabral</h1>
@@ -195,76 +26,107 @@
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#servicos">Serviços</a></li>
         <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Hero / Apresentação -->
   <section class="hero" id="home">
-    <img src="profile.jpg" alt="João Victor Cabral">
-    <h2>Transformando processos através da tecnologia e gestão inteligente.</h2>
-    <p>Estudante de Gestão de Tecnologia da Informação na UNIFG, com experiência em Segurança do Trabalho e Saúde Ocupacional. Em transição de carreira para a área de tecnologia, unindo gestão, inovação e eficiência digital.</p>
+    <img src="profile.jpg" alt="João Victor Cabral" class="profile-img">
+    <h2>Transformando processos através da tecnologia e inovação.</h2>
+    <p>Estudante de Gestão de TI na UNIFG, focado em automação, análise de dados e integração de inteligência artificial em soluções corporativas.</p>
     <a href="#sobre" class="btn">Saiba mais</a>
   </section>
 
+  <!-- Sobre mim -->
   <section id="sobre">
     <h3>Sobre mim</h3>
-    <p>Sou estudante de Gestão de TI com sólida vivência em gestão operacional e segurança do trabalho. Busco unir tecnologia e eficiência para criar soluções inteligentes que otimizem processos e garantam melhores resultados. Tenho interesse em automação, análise de dados e integração de IA em sistemas corporativos.</p>
-    <a href="curriculo_joao_cabral.pdf" class="btn" download>📄 Baixar Currículo</a>
+    <p>Sou estudante de Gestão de TI com interesse em automação, análise de dados e desenvolvimento de soluções digitais eficientes. Busco transformar processos através de tecnologia e inovação.</p>
+    <a href="curriculo.pdf" class="btn" download>📄 Baixar Currículo</a>
   </section>
 
+  <!-- Serviços -->
   <section id="servicos">
     <h3>Serviços</h3>
-    <div class="services">
-      <div class="card">
+    <div class="cards-container">
+      <div class="card fade-in">
         <i class="fas fa-laptop-code"></i>
-        <h4>Suporte e Consultoria em TI</h4>
-        <p>Auxílio técnico, otimização de sistemas e suporte remoto para empresas e usuários.</p>
+        <h4>Desenvolvimento Web</h4>
+        <p>Criação de sites responsivos e interfaces funcionais para empresas e projetos pessoais.</p>
       </div>
-      <div class="card">
-        <i class="fas fa-network-wired"></i>
-        <h4>Gestão de Infraestrutura</h4>
-        <p>Monitoramento, estruturação e análise de redes corporativas e ambientes digitais.</p>
-      </div>
-      <div class="card">
+      <div class="card fade-in">
         <i class="fas fa-chart-line"></i>
-        <h4>Automação e Dados</h4>
-        <p>Criação de dashboards, automações simples e relatórios estratégicos com Power BI e Excel.</p>
+        <h4>Análise de Dados</h4>
+        <p>Dashboards, relatórios estratégicos e insights utilizando Excel, Power BI e Python.</p>
+      </div>
+      <div class="card fade-in">
+        <i class="fas fa-robot"></i>
+        <h4>Automação e IA</h4>
+        <p>Integração de processos com automações simples e aplicação de inteligência artificial.</p>
       </div>
     </div>
   </section>
 
+  <!-- Projetos -->
   <section id="projetos">
     <h3>Projetos</h3>
-    <div class="projects">
-      <div class="card">
+    <div class="cards-container">
+      <div class="card fade-in">
         <i class="fas fa-brain"></i>
         <h4>Integração de IA</h4>
         <p>Aplicação de modelos de inteligência artificial em análise de processos corporativos. (Em desenvolvimento)</p>
       </div>
-      <div class="card">
+      <div class="card fade-in">
         <i class="fas fa-code"></i>
-        <h4>Website Profissional</h4>
-        <p>Desenvolvimento do meu portfólio em HTML e CSS hospedado no GitHub Pages.</p>
+        <h4>Portfólio Online</h4>
+        <p>Desenvolvimento do meu portfólio profissional em HTML e CSS, hospedado no GitHub Pages.</p>
       </div>
-      <div class="card">
-        <i class="fas fa-user-shield"></i>
-        <h4>Segurança Digital</h4>
-        <p>Projeto de conscientização e implementação de práticas seguras em ambiente corporativo. (Planejado)</p>
+      <div class="card fade-in">
+        <i class="fas fa-database"></i>
+        <h4>Automação de Relatórios</h4>
+        <p>Criação de relatórios automáticos e dashboards estratégicos para análise de dados. (Planejado)</p>
       </div>
     </div>
   </section>
 
+  <!-- Habilidades -->
+  <section id="habilidades">
+    <h3>Habilidades</h3>
+
+    <div class="skill">
+      <span>HTML</span>
+      <div class="bar"><div class="progress" style="width: 90%;"></div></div>
+    </div>
+    <div class="skill">
+      <span>CSS</span>
+      <div class="bar"><div class="progress" style="width: 85%;"></div></div>
+    </div>
+    <div class="skill">
+      <span>JavaScript</span>
+      <div class="bar"><div class="progress" style="width: 70%;"></div></div>
+    </div>
+    <div class="skill">
+      <span>Power BI / Excel</span>
+      <div class="bar"><div class="progress" style="width: 80%;"></div></div>
+    </div>
+  </section>
+
+  <!-- Contato -->
   <section id="contato">
     <h3>Contato</h3>
     <p>Entre em contato ou conecte-se comigo pelas redes abaixo:</p>
-    <footer>
-      <a href="mailto:joaovictorcabralsst@gmail.com"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/joão-victor-cabral-6158a7201/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/JoaoVecna" target="_blank"><i class="fab fa-github"></i></a>
-      <p>© 2025 João Victor Cabral — Portfólio desenvolvido com foco em crescimento profissional.</p>
-    </footer>
+    <div class="social-icons">
+      <a href="mailto:joaovictorcabralsst@gmail.com" aria-label="Enviar email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/joão-victor-cabral-6158a7201/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/JoaoVecna" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </div>
   </section>
 
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 João Victor Cabral — Portfólio focado em tecnologia e inovação.</p>
+  </footer>
 </body>
 </html>
