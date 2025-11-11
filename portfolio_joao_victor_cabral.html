@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>João Victor Cabral — Portfolio</title>
+  <meta name="description" content="João Victor Cabral — Tech Management student. Consultoria em TI, automação, segurança da informação. Disponível para vagas remotas e freelas." />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#06b6d4; --glass: rgba(255,255,255,0.03);
+      --bg-light:#f6f8fb; --text-light:#0b1220; --card-light:#ffffff; --accent-dark:#0b84a0;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#e6eef6; -webkit-font-smoothing:antialiased}
+    .container{max-width:980px;margin:36px auto;padding:24px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px; padding:22px; box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;gap:16px;align-items:center}
+    .avatar{width:76px;height:76px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px}
+    h1{margin:0;font-size:20px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    .lang{display:flex;gap:8px}
+    .lang button{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:6px 10px;border-radius:8px;color:inherit;cursor:pointer}
+    nav{display:flex;gap:12px;margin-top:18px}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px}
+    .grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px}
+    @media(min-width:880px){.grid{grid-template-columns:360px 1fr}}
+    .sidebar{background:var(--glass);padding:16px;border-radius:10px}
+    .section{margin-bottom:14px}
+    h2{margin:0 0 10px;font-size:16px}
+    .muted{color:var(--muted);font-size:14px}
+    .services ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+    .services li{background:rgba(255,255,255,0.02);padding:10px;border-radius:8px}
+    .cta{display:flex;gap:8px;align-items:center;margin-top:12px}
+    .btn{background:var(--accent);color:#072024;padding:10px 12px;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn-ghost{border:1px solid rgba(255,255,255,0.08);padding:10px 12px;border-radius:10px;color:var(--muted);text-decoration:none}
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* Light mode support (toggle via .light on body) */
+    body.light{background:var(--bg-light);color:var(--text-light)}
+    body.light .card{background:var(--card-light);box-shadow:0 6px 18px rgba(12,12,12,0.06)}
+    body.light .muted{color:#475569}
+    body.light .avatar{color:#fff}
+    body.light .btn{background:var(--accent-dark);color:#fff}
+
+    /* small touches */
+    .meta{display:flex;flex-direction:column;gap:6px}
+    .contact a{color:inherit;text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <header>
+        <div class="brand">
+          <div class="avatar">JVC</div>
+          <div>
+            <h1 id="name">João Victor Cabral</h1>
+            <p class="lead" id="subtitle">Tech Management Student | Consulting in IT &amp; Security</p>
+          </div>
+        </div>
+        <div class="lang">
+          <button onclick="setLang('pt')">PT</button>
+          <button onclick="setLang('en')">EN</button>
+          <button onclick="toggleTheme()" title="Toggle theme">🌓</button>
+        </div>
+      </header>
+
+      <nav>
+        <a href="#about" id="nav-about">About / Sobre</a>
+        <a href="#services" id="nav-services">Services / Serviços</a>
+        <a href="#contact" id="nav-contact">Contact / Contato</a>
+      </nav>
+
+      <div class="grid">
+        <aside class="sidebar">
+          <div class="section">
+            <h2 id="side-title">About</h2>
+            <p class="muted" id="side-desc">Information Technology student transitioning from Occupational Safety, focused on automation, data analysis and security. Available for remote roles and freelance projects.</p>
+          </div>
+
+          <div class="section">
+            <h2>Contact</h2>
+            <div class="muted contact">
+              <div>Email: <a href="mailto:joaovictorcabralsst@gmail.com">joaovictorcabralsst@gmail.com</a></div>
+              <div>Phone: <a href="tel:+5581983644575">(81) 98364-4575</a></div>
+              <div><a href="https://www.linkedin.com/in/jo%C3%A3o-victor-cabral-6158a7201/" target="_blank">LinkedIn</a></div>
+              <div><a href="https://github.com/" target="_blank">GitHub</a> (add your profile)</div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2>Quick facts</h2>
+            <p class="muted">• Nursing degree (2025) • Technical Safety background • Learning Python, SQL and Cloud • English for tech reading</p>
+          </div>
+        </aside>
+
+        <main>
+          <section id="about" class="section">
+            <h2>About / Sobre mim</h2>
+            <p class="muted" id="about-en">I am an Information Technology student transitioning from Occupational Safety. I bring strong analytical skills, experience managing safety programs across multiple branches, and a practical approach to risk assessment. Currently focused on automation, data analysis, AI tools and infrastructure management. Available for remote/onsite roles and freelance consulting.</p>
+            <p class="muted" id="about-pt" style="display:none">Sou estudante de Gestão de Tecnologia da Informação em transição da área de Segurança do Trabalho. Tenho perfil analítico, experiência em programas de segurança em múltiplas filiais e foco prático em mapeamento de riscos. Atualmente me dedico a automação, análise de dados, ferramentas de IA e gestão de infraestrutura. Disponível para vagas remotas/presenciais e consultoria freelance.</p>
+          </section>
+
+          <section id="services" class="section services">
+            <h2>Services I Offer / Serviços que ofereço</h2>
+
+            <div id="services-en">
+              <ul>
+                <li><strong>IT & Security Consultancy</strong> — Risk assessments, basic ISMS alignment (ISO 27001 concepts), security policies and trainings for small businesses.</li>
+                <li><strong>Automation & Scripting (Python)</strong> — Small automations to reduce manual tasks: reporting, file processing, backups and integrations.</li>
+                <li><strong>Infrastructure & Remote Support</strong> — Basic network review, backup strategy, cloud migration advisory and remote support packages.</li>
+                <li><strong>Data & Dashboards</strong> — Data collection, basic SQL queries and Excel/Power BI reports to help decision-making.</li>
+                <li><strong>Training & Documentation</strong> — User training (security best practices), operational procedures and technical documentation.</li>
+              </ul>
+            </div>
+
+            <div id="services-pt" style="display:none">
+              <ul>
+                <li><strong>Consultoria em TI e Segurança</strong> — Avaliação de riscos, alinhamento inicial a ISMS (conceitos ISO 27001), políticas de segurança e treinamentos para pequenas empresas.</li>
+                <li><strong>Automação & Scripting (Python)</strong> — Automação de tarefas: relatórios, processamento de arquivos, backups e integrações simples.</li>
+                <li><strong>Infraestrutura & Suporte Remoto</strong> — Revisão básica de rede, estratégia de backup, consultoria para migração para nuvem e pacotes de suporte remoto.</li>
+                <li><strong>Dados & Dashboards</strong> — Coleta de dados, consultas básicas em SQL e relatórios em Excel/Power BI para suporte à decisão.</li>
+                <li><strong>Treinamentos & Documentação</strong> — Treinamentos para usuários, procedimentos operacionais e documentação técnica.</li>
+              </ul>
+            </div>
+
+            <div class="cta">
+              <a class="btn" href="mailto:joaovictorcabralsst@gmail.com">Hire / Contact</a>
+              <a class="btn-ghost" href="#contact">See contact</a>
+            </div>
+          </section>
+
+          <section id="contact" class="section">
+            <h2>Contact / Contato</h2>
+            <p class="muted">Available for remote work, freelance projects and internships. I answer quickly to email and LinkedIn messages.</p>
+            <div style="margin-top:12px">
+              <a class="btn" href="mailto:joaovictorcabralsst@gmail.com">Email me</a>
+              <a class="btn-ghost" href="https://www.linkedin.com/in/jo%C3%A3o-victor-cabral-6158a7201/" target="_blank">LinkedIn</a>
+            </div>
+          </section>
+
+        </main>
+      </div>
+
+      <footer>
+        <div class="muted">Made by João Victor Cabral — Available for remote roles & freelance consulting • © 2025</div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    const langMap = {
+      en: {
+        title: 'João Victor Cabral',
+        subtitle: 'Tech Management Student | Consulting in IT & Security',
+      },
+      pt: {
+        title: 'João Victor Cabral',
+        subtitle: 'Estudante de Gestão de TI | Consultoria em TI & Segurança'
+      }
+    }
+
+    function setLang(code){
+      if(code === 'pt'){
+        document.getElementById('about-en').style.display = 'none';
+        document.getElementById('about-pt').style.display = 'block';
+        document.getElementById('services-en').style.display = 'none';
+        document.getElementById('services-pt').style.display = 'block';
+      } else {
+        document.getElementById('about-en').style.display = 'block';
+        document.getElementById('about-pt').style.display = 'none';
+        document.getElementById('services-en').style.display = 'block';
+        document.getElementById('services-pt').style.display = 'none';
+      }
+    }
+
+    function toggleTheme(){
+      document.body.classList.toggle('light');
+    }
+
+    // default: english
+    setLang('en');
+  </script>
+</body>
+</html>
