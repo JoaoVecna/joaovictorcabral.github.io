@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #111;
+  background: linear-gradient(135deg, #f7f7f7, #dcdcdc, #f0f0f0);
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+nav a {
+  margin: 0 10px;
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #555;
+}
+
+#banner img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #999;
+}
+
+main {
+  padding: 40px;
+  text-align: center;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+.terminal {
+  background: #000;
+  color: #00ff00;
+  font-family: monospace;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.highlight {
+  color: #0f0;
+}
+
+.shining-text {
+  font-size: 2.5em;
+  background: linear-gradient(90deg, #a9a9a9, #d3d3d3, #a9a9a9);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+  0% { background-position: -200px; }
+  100% { background-position: 200px; }
+}
+
+@keyframes lightning {
+  0%, 95%, 100% { opacity: 0; }
+  96% { opacity: 1; }
+  97% { opacity: 0; }
+  98% { opacity: 1; }
+  99% { opacity: 0; }
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0,0,0,0.15) 1%, transparent 50%) repeat;
+  animation: lightning 5s infinite;
+  pointer-events: none;
+  z-index: 1;
+}
